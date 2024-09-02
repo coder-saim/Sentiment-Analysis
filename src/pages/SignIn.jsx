@@ -1,26 +1,24 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
+import React from 'react'
 
 export default function SignIn() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-  const handleRegister = () => {
-    console.log(email, password);
-  };
-
   return (
-    <div className='p-3 max-w-lg mx-auto'>
-      <h1 className='text-3xl text-center font-bold my-7'>Sign In</h1>
-      <div className='flex flex-col gap-4'>
-        <input className='border p-3 rounded-lg' type="text" placeholder="Enter your email" value={email} onChange={(e) => setEmail(e.target.value)}/>
-        <input className='border p-3 rounded-lg' type="password" placeholder="Enter a Password" value={password} onChange={(e) => setPassword(e.target.value)}/>
-        <button className='bg-blue-600 text-white p-3 rounded-lg text-lg font-semibold hover:opacity-100' onClick={handleRegister}>Sign Up</button>
-      </div>
-      <div className='flex gap-1 mt-5 font-semibold'>
-        <p>Don't have an account?</p>
-        <Link to='/sign-in' className='text-blue-600 hover:underline'>Sign Up</Link>
-      </div>
+    <div className='bg-sky-950 w-full min-h-screen px-60 py-24'>
+      <h1 className='text-6xl font-semibold text-white text-center'>Discover Your Sentiment Instantly</h1>
+      <h2 className='text-xl mt-10 text-white text-center'>
+        Analyze social media posts and reviews with a single click. 
+        Get quick and accurate sentiment scores to understand emotions behind the words — positive, negative, or neutral.
+      </h2>
+      <section className='w-2/3 bg-white rounded-xl mt-10'>
+        <textarea 
+          className='w-full p-4 rounded-t-lg border-t-2 h-80 resize-none align-top' 
+          placeholder='Enter your text here'
+        />
+        <div className='flex justify-end border-t-2 py-3 pr-2'>
+          <button className='bg-teal-600 text-lg text-white font-semibold rounded-2xl py-2 px-6'>
+            Analyze
+          </button>
+        </div>
+      </section>
     </div>
   )
 }
