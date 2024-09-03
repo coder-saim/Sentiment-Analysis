@@ -4,8 +4,8 @@ export default function SignUp() {
 
   return (
 <GaugeComponent
-  style={{ width: '40%', height: '100px'}} // Example dimensions
-  className='ml-10 mt-8'
+  style={{ width: '120%'}}
+  className='ml-10 mt-4'
   type="semicircle"
   arc={{
     width: 0.2,
@@ -19,9 +19,6 @@ export default function SignUp() {
         tooltip: {
           text: 'Negtive!'
         },
-        onClick: () => console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"),
-        onMouseMove: () => console.log("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"),
-        onMouseLeave: () => console.log("CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC"),
       },
       {
         limit: 0.2,
@@ -46,14 +43,7 @@ export default function SignUp() {
     width: 15,
     elastic: true,
   }}
-  labels={{
-    valueLabel: { formatTextValue: value => value, fontSize: 10 },
-    tickLabels: {
-      type: 'outer',
-      valueConfig: { formatTextValue: value => value, fontSize: 10 }
-    }
-  }}
-  value={0.42}
+  value={0.00}
   minValue={-1}
   maxValue={1}
 />
