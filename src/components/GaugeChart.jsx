@@ -4,7 +4,7 @@ export default function GaugeChart() {
 
   return (
     <GaugeComponent
-      style={{ width: '100%'}} // Example dimensions
+      style={{ width: '100%'}}
       className='mt-6 ml-12'
       type="semicircle"
       arc={{
@@ -43,7 +43,7 @@ export default function GaugeChart() {
         width: 15,
         elastic: true,
       }}
-      value={0.00}
+      value={0.60}
       minValue={-1}
       maxValue={1}
     />

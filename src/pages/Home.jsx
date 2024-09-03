@@ -1,16 +1,29 @@
 import React, { useState } from 'react'
 import GaugeChart from '../components/GaugeChart'
+import Loader from '../components/Loader'
 
 export default function Home() {
 
   const [language, setLanguage] = useState('English')
+  const [loading, setLoading] = useState(false)
 
   const changeLanguage = (lang) => {
     setLanguage(lang)
   }
 
+  const handleAnalyze = () => {
+    // Start loader
+    setLoading(true)
+
+    // Simulate a delay of 3 seconds for analysis
+    setTimeout(() => {
+      // Stop loader and bring back the analyze button
+      setLoading(false)
+    }, 3000)
+  }
+
   return (
-    <div className='bg-[#0e073b] w-full min-h-screen pt-20 pb-24'>
+    <div className='bg-[#0e073b] w-full min-h-screen py-20'>
       <header className='px-60'>
         <h1 className='text-5xl font-semibold text-white text-center'>
           Discover Your Sentiment Instantly
@@ -48,9 +61,16 @@ export default function Home() {
             placeholder='Enter your text here'
           />
           <div className='flex justify-end border-t-2 py-2 pr-2'>
-            <button className='bg-teal-600 text-lg text-white font-semibold rounded-2xl py-1 px-6'>
-              Analyze
-            </button>
+            {!loading ? (
+              <button
+                onClick={handleAnalyze}
+                className='bg-teal-600 text-lg text-white font-semibold rounded-3xl py-1 w-28 text-center h-10'
+              >
+                Analyze
+              </button>
+            ) : (
+              <Loader />
+            )}
           </div>
         </section>
         <div className='w-[420px]'>
