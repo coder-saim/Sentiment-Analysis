@@ -4,8 +4,8 @@ export default function GaugeChart() {
 
   return (
     <GaugeComponent
-      style={{ width: '120%'}} // Example dimensions
-      className='ml-10 mt-4'
+      style={{ width: '150%'}} // Example dimensions
+      className='mt-6'
       type="semicircle"
       arc={{
         width: 0.2,
