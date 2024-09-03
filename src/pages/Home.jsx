@@ -10,7 +10,7 @@ export default function Home() {
   }
 
   return (
-    <div className='bg-[#0e073b] w-full min-h-screen py-24'>
+    <div className='bg-[#0e073b] w-full min-h-screen pt-20 pb-24'>
       <header className='px-60'>
         <h1 className='text-5xl font-semibold text-white text-center'>
           Discover Your Sentiment Instantly
@@ -20,8 +20,8 @@ export default function Home() {
           Get quick and accurate sentiment scores to understand emotions behind the words—positive, negative, or neutral
         </h2>
       </header>
-      <div className='flex mt-16 pl-60 pr-40'>
-        <section className='w-3/5 bg-white rounded-xl'>
+      <div className='flex mt-16 justify-center'>
+        <section className='w-[640px] bg-white rounded-xl'>
           <div className='bg-white text-lg flex font-semibold rounded-t-lg'>
             <div className='pl-6 pr-3 py-3'>
               Language :
@@ -53,10 +53,10 @@ export default function Home() {
             </button>
           </div>
         </section>
-        <div>
-          <h1 className='font-semibold text-3xl ml-6 text-white text-center tracking-wide'>Sentiment Score</h1>
+        <div className='w-[420px]'>
+          <h1 className='font-semibold text-4xl ml-20 text-white text-center tracking-wide'>Sentiment Score</h1>
           <GaugeChart />
-          <h1 className='font-semibold text-3xl ml-6 mt-6 text-white text-center tracking-wide'>Sentiment : Neutral</h1>
+          <h1 className='font-semibold text-4xl ml-20 mt-6 text-white text-center tracking-wide'>Sentiment : Neutral</h1>
         </div>
       </div>
     </div>
