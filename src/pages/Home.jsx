@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import GaugeChart from '../components/GaugeChart';
 import Loader from '../components/Loader';
+import light_background from '../assets/light_background.png';
 
 export default function Home() {
   const [language, setLanguage] = useState('English');
@@ -47,22 +48,18 @@ export default function Home() {
   };
 
   return (
-    <div className='bg-[#0e073b] w-full min-h-screen py-20'>
-      <header className='px-60'>
-        <h1 className='text-5xl font-semibold text-white text-center'>
-          Discover Your Sentiment Instantly
-        </h1>
-        <h2 className='text-xl px-20 mt-10 text-white text-center'>
-          Analyze social media posts and reviews with a single click.
-          Get quick and accurate sentiment scores to understand emotions behind the words—positive, negative, or neutral
-        </h2>
-      </header>
-      <div className='flex mt-16 justify-center'>
-        <section className='w-[640px] bg-white rounded-xl'>
-          <div className='bg-white text-lg flex font-semibold rounded-t-lg'>
-            <div className='pl-6 pr-3 py-3'>
-              Language :
-            </div>
+    <div
+      className='w-full relative flex justify-center py-20'
+      style={{
+        backgroundImage: `url(${light_background})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
+      <div className='flex justify-center w-full max-w-6xl'>
+        <section className='w-[640px] bg-white bg-opacity-90 rounded-xl shadow-lg'>
+          <div className='bg-white bg-opacity-90 text-lg flex font-semibold rounded-t-lg'>
+            <div className='pl-6 pr-3 py-3'>Language :</div>
             <button
               onClick={() => changeLanguage('English')}
               className={`py-3 px-3 border-b-2 ${
@@ -100,9 +97,13 @@ export default function Home() {
           </div>
         </section>
         <div className='w-[420px]'>
-          <h1 className='font-semibold text-3xl ml-20 text-white text-center tracking-wide'>Sentiment Score</h1>
+          <h1 className='font-semibold text-3xl ml-20 text-center tracking-wide'>
+            Sentiment Score
+          </h1>
           <GaugeChart score={score} />
-          <h1 className='font-semibold text-3xl ml-20 mt-6 text-white text-center tracking-wide'>Sentiment : {sentiment}</h1>
+          <h1 className='font-semibold text-3xl ml-20 mt-6 text-center tracking-wide'>
+            Sentiment : {sentiment}
+          </h1>
         </div>
       </div>
     </div>

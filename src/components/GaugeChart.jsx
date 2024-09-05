@@ -15,7 +15,7 @@ export default function GaugeChart({ score }) {
           {
             limit: -0.2,
             color: '#EA4228',
-            showTick: true,
+            showTick: false,
             tooltip: {
               text: 'Negtive!'
             },
@@ -23,7 +23,7 @@ export default function GaugeChart({ score }) {
           {
             limit: 0.2,
             color: '#F5CD19',
-            showTick: true,
+            showTick: false,
             tooltip: {
               text: 'Neutral!'
             }
@@ -37,16 +37,19 @@ export default function GaugeChart({ score }) {
           }
         ]
       }}
-      // labels={{
-      //   valueLabel: {
-      //     style: {
-      //       fontSize: "40px",
-      //       fill: '#345243',
-      //     },
-      //   },
-      // }}
+      labels={{
+        valueLabel: {
+          style: {
+            fontSize: "40px",
+            fill: '#345243',
+          },
+        },
+        tickLabels: {
+          hideMinMax: true,
+        },
+      }}
       pointer={{
-        color: '#345243',
+        color: '#fff',
         length: 0.70,
         width: 15,
         elastic: true,
