@@ -1,6 +1,6 @@
 import GaugeComponent from 'react-gauge-component';
 
-export default function GaugeChart() {
+export default function GaugeChart({ score }) {
 
   return (
     <GaugeComponent
@@ -37,13 +37,21 @@ export default function GaugeChart() {
           }
         ]
       }}
+      // labels={{
+      //   valueLabel: {
+      //     style: {
+      //       fontSize: "40px",
+      //       fill: '#345243',
+      //     },
+      //   },
+      // }}
       pointer={{
         color: '#345243',
         length: 0.70,
         width: 15,
         elastic: true,
       }}
-      value={0.60}
+      value={score}
       minValue={-1}
       maxValue={1}
     />
