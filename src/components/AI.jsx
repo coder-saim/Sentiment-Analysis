@@ -3,7 +3,7 @@ import GaugeChart from '../components/GaugeChart';
 import Loader from '../components/Loader';
 import light_background from '../assets/light_background.png';
 
-export default function Home() {
+export default function AI() {
   const [language, setLanguage] = useState('English');
   const [loading, setLoading] = useState(false);
   const [text, setText] = useState('');
@@ -49,6 +49,7 @@ export default function Home() {
 
   return (
     <div
+      id='home'
       className='w-full relative flex justify-center pt-14 pb-16'
       style={{
         backgroundImage: `url(${light_background})`,
@@ -58,7 +59,7 @@ export default function Home() {
     >
       <div className='flex flex-col items-center w-full max-w-6xl'>
         {/* Headline */}
-        <h1 className='font-bold text-4xl text-center text-gray-800 mb-12'>
+        <h1 className='font-bold text-4xl text-center text-gray-600 mb-12'>
           Check your sentiment score instantly
         </h1>
         

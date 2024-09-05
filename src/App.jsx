@@ -1,17 +1,14 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Home from "./pages/Home"
-import SignIn from "./pages/SignIn"
-import SignUp from "./pages/SignUp"
+import Benefits from "./components/Benefits"
+import AI from "./components/AI"
+import Hero from "./components/Hero"
+
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/sign-in" element={<SignIn />} />
-        <Route path="/sign-up" element={<SignUp />} />
-        <Route path="/" element={<Home/>} />
-      </Routes>
-    </BrowserRouter>
+    <>
+      <Hero/>
+      <Benefits/>
+      <AI/>
+    </>
   )
 }
