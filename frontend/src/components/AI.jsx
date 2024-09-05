@@ -49,7 +49,7 @@ export default function AI() {
 
   return (
     <div
-      id='home'
+      id="get-started"
       className='w-full relative flex justify-center pt-14 pb-16'
       style={{
         backgroundImage: `url(${light_background})`,
@@ -58,12 +58,9 @@ export default function AI() {
       }}
     >
       <div className='flex flex-col items-center w-full max-w-6xl'>
-        {/* Headline */}
         <h1 className='font-bold text-4xl text-center text-gray-600 mb-12'>
           Check your sentiment score instantly
         </h1>
-        
-        {/* Content section with textarea and gauge */}
         <div className='flex justify-center w-full'>
           <section className='w-[640px] bg-white bg-opacity-90 rounded-xl shadow-lg'>
             <div className='bg-white bg-opacity-90 text-lg flex font-semibold rounded-t-lg'>
@@ -108,8 +105,6 @@ export default function AI() {
               )}
             </div>
           </section>
-
-          {/* Gauge Chart */}
           <div className='w-[420px] ml-8'>
             <GaugeChart score={score} />
             <h1 className='font-bold ml-16 text-3xl mt-2 text-center tracking-wide'>

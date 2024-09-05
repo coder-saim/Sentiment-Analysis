@@ -7,7 +7,7 @@ export default function Hero() {
       <header className='absolute top-0 left-0 w-full flex justify-between items-center py-6 bg-transparent px-60'>
         <h1 className='text-white text-2xl font-bold'>SentiScan</h1>
         <nav className='flex space-x-8 text-white'>
-          <a href='#home' className='text-lg font-semibold border-2 p-3 w-32 text-center rounded-2xl hover:font-bold'>Get Started</a>
+          <a href='#get-started' className='text-lg font-semibold border-2 p-3 w-32 text-center rounded-2xl hover:font-bold'>Get Started</a>
         </nav>
       </header>
       <img 
