@@ -4,8 +4,8 @@ export default function GaugeChart({ score }) {
 
   return (
     <GaugeComponent
-      style={{ width: '100%'}}
-      className='mt-6 ml-12'
+      style={{ width: '110%'}}
+      className='mt-6 ml-4'
       type="semicircle"
       arc={{
         width: 0.2,
@@ -13,17 +13,17 @@ export default function GaugeChart({ score }) {
         cornerRadius: 1,
         subArcs: [
           {
-            limit: -0.2,
+            limit: -0.1,
             color: '#EA4228',
-            showTick: false,
+            showTick: true,
             tooltip: {
               text: 'Negtive!'
             },
           },
           {
-            limit: 0.2,
+            limit: 0.1,
             color: '#F5CD19',
-            showTick: false,
+            showTick: true,
             tooltip: {
               text: 'Neutral!'
             }
@@ -40,19 +40,34 @@ export default function GaugeChart({ score }) {
       labels={{
         valueLabel: {
           style: {
-            fontSize: "40px",
-            fill: '#345243',
+            fontSize: "50px",
+            fill: '#fff',
+            backgroundColor: '#000',
           },
+          matchColorWithArc: true,
         },
         tickLabels: {
-          hideMinMax: true,
-        },
-      }}
+          hideMinMax: false,
+          defaultTickValueConfig: {
+            style: {
+              fill: '#000',
+              fontSize: '12px',
+              fontWeight: 'bold',
+            },
+          },
+          defaultTickLineConfig: {
+            width: 1,
+            color: '#000',
+            distanceFromArc: 0,
+            length: 10,
+          },
+      }}}
       pointer={{
-        color: '#fff',
+        color: '#808080',
         length: 0.70,
         width: 15,
         elastic: true,
+        type: 'arrow',
       }}
       value={score}
       minValue={-1}
