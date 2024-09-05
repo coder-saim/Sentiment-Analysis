@@ -1,0 +1,19 @@
+Positive Sentiment
+"I'm so excited about my new job!"
+"The concert was incredible. The band was amazing."
+"I had the most amazing time at the beach today."
+
+
+Negative Sentiment
+"I'm so disappointed with the service at that restaurant."
+"The food was terrible. I'll never eat there again."
+"This weather is terrible. I wish it would stop raining."
+
+
+Neutral Sentiment
+"It's raining outside."
+"Today is Tuesday."
+"I'm going to the grocery store."
+
+
+
