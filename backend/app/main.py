@@ -16,11 +16,16 @@ origins = [
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],  # Add "PUT" method
     allow_headers=["*"],
 )
 
-app.include_router(auth.router)
+@app.get("/", tags=["Root"])
+def root():
+    return {"message": "Hello World"}
+
+
+# app.include_router(auth.router)
 app.include_router(sentiments.router)
