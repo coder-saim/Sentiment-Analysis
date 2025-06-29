@@ -1,4 +1,4 @@
-alembic==1.13.2Add commentMore actions
+alembic==1.13.2
 annotated-types==0.7.0
 anyio==4.4.0
 async-timeout==4.0.3
@@ -48,7 +48,7 @@ starlette==0.38.2
 sympy==1.13.2
 textblob==0.18.0.post0
 tokenizers==0.19.1
-torch==2.4.0Add commentMore actions
+torch==2.4.0
 tqdm==4.66.5
 transformers==4.44.2
 typing_extensions==4.12.2
