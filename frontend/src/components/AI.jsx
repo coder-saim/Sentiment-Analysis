@@ -17,12 +17,14 @@ export default function AI() {
     setScore(0);
   };
 
+  const baseUrl = 'https://sentiment-backend-latest-r2tn.onrender.com';
+
   const handleAnalyze = async () => {
     setLoading(true);
     const url =
       language === 'English'
-        ? 'http://127.0.0.1:8000/sentiments/en'
-        : 'http://127.0.0.1:8000/sentiments/bn';
+        ? `${baseUrl}/sentiments/en`
+        : `${baseUrl}/sentiments/bn`;
 
     try {
       const response = await fetch(url, {
