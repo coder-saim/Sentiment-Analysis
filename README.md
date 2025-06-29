@@ -46,3 +46,8 @@ This will start the frontend on:
 ```
 http://localhost:5173/
 ```
+
+# Live Website Testing
+
+- **Backend API Docs:** [https://sentiment-analysis-backend](https://sentiment-backend-latest-r2tn.onrender.com/docs)
+- **Frontend App:** [https://sentiment-analysis-frontend](https://sentiment-analysis-eight-plum.vercel.app/)
