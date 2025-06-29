@@ -47,3 +47,8 @@ docker build -t your-username/sentiment-backend:latest .
 # Push latest (development)
 docker push your-username/sentiment-backend:latest
 ```
+
+### Render Hosting Format
+```
+docker.io/saimahmmed/sentiment-backend:latest
+```
