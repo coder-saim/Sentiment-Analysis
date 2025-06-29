@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
-# from app.ai_model import translate_bn_to_en  # Temporarily disabled for deployment
+from app.ai_model import translate_bn_to_en
 from app.schemas import TextInput
 from textblob import TextBlob
 
@@ -32,31 +32,24 @@ def sentiment_predictions(inputText: TextInput):
 
 @router.post("/bn")
 def sentiment_predictions(inputText: TextInput):
-    # Temporarily disabled for deployment - transformers package causing build issues
-    return {
-        'message': 'Bengali translation temporarily unavailable during deployment setup',
-        'error': 'Please use /sentiments/en endpoint for now',
-        'input': inputText.text
-    }
     
-    # Original code commented out:
-    # text = translate_bn_to_en(inputText.text)
-    # predictions = TextBlob(text)
-    # if predictions.polarity>0:
-    #     return {
-    #             'Prediction': 'Positive',
-    #             'Score': predictions.polarity
-    #            }
-    # elif predictions.polarity<0:
-    #     return {
-    #             'Prediction': 'Negative',
-    #             'Score': predictions.polarity
-    #            }
-    # elif predictions.polarity==0:
-    #     return {
-    #             'Prediction': 'Neutral',
-    #             'Score': predictions.polarity
-    #            }
-    # else: return {'Oops! Some went wrong!'} 
+    text = translate_bn_to_en(inputText.text)
+    predictions = TextBlob(text)
+    if predictions.polarity>0:
+        return {
+                'Prediction': 'Positive',
+                'Score': predictions.polarity
+               }
+    elif predictions.polarity<0:
+        return {
+                'Prediction': 'Negative',
+                'Score': predictions.polarity
+               }
+    elif predictions.polarity==0:
+        return {
+                'Prediction': 'Neutral',
+                'Score': predictions.polarity
+               }
+    else: return {'Oops! Some went wrong!'} 
 
  
